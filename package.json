@@ -1,0 +1,17 @@
+{
+  "name": "vuepressBlog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "sudo vuepress dev docs",
+    "build": "sudo vuepress build docs",
+    "p": "sudo bash deploy.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
