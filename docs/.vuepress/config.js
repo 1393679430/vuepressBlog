@@ -1,6 +1,9 @@
 module.exports = {
     title: '编程趣事',  // 设置网站标题
     description: '编程趣事',
+    head: [
+        ['script', { src: 'https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js' }]
+    ],
     base: '/',
     themeConfig: {
         nav: [
