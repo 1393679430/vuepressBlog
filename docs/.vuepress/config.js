@@ -1,21 +1,79 @@
 module.exports = {
-    title: 'My Page',  // 设置网站标题
-    description : 'My Page',
-    base : '/vuepressBlog/',
-    themeConfig : {
-        nav : [
-            { text: '首页', link: '/home' },
-            { text: '文章', link: '/list' },
-            { text: '总结', link: '/tips' }
+    title: '编程趣事',  // 设置网站标题
+    description: '编程趣事',
+    base: '/',
+    themeConfig: {
+        nav: [
+            {
+                text: '博客',
+                link: '/views/blog/'
+            }, {
+                text: '工具',
+                link: '/views/tools/'
+            }, {
+                text: '其他',
+                items: [
+                    {
+                        text: '我的github',
+                        link: 'https://github.com/1393679430'
+                    },
+                ]
+            }
         ],
         sidebar: {
-            '/' : [
-                "/", //指的是根目录的md文件 也就是 README.md 里面的内容
-                "home",  //根目录创建 home.md文件
-                "list", //根目录创建 list.md文件
-                "tips"  //根目录创建 tips.md文件
+            '/views/blog/': [
+                {
+                    title: '回到首页',
+                    path: '/',
+                }, {
+                    title: '博客目录',
+                    path: '/views/blog/',
+                    collapsable: true,
+                    children: [
+                        {
+                            title: '博客01',
+                            path: '/views/blog/blog01',
+                        },
+                    ]
+                },
+            ],
+            '/views/tools/': [
+                {
+                    title: '回到首页',
+                    path: '/',
+                }, {
+                    title: '工具目录',
+                    path: '/views/tools/',
+                    collapsable: true,
+                    children: [
+                        {
+                            title: '工具01',
+                            path: '/views/tools/tools01',
+                        },
+                    ]
+                },
+            ],
+            '/': [
+                {
+                    title: '首页',
+                    path: '/',
+                }, {
+                    title: '博客',
+                    path: '/views/blog/',
+                }, {
+                    title: '工具',
+                    path: '/views/tools/',
+                }, {
+                    title: '联系我',
+                    path: '/views/contact/',
+                }, {
+                    title: '关于我',
+                    path: '/views/about/',
+                },
             ]
         },
-        sidebarDepth : 2
+        displayAllHeaders: true,
+        activeHeaderLinks: false,
+
     }
 }
