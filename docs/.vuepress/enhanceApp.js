@@ -2,31 +2,33 @@ import Vue from 'vue'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import '../style/index.css'
-
+let showL2Dwidget = true
 export default ({
     Vue,
     options,
     router
 }) => {
     Vue.use(Element)
-    L2Dwidget.init({
-        "model": {
-            "scale": 0.5
-        },
-        "display": {
-            "position": "right",
-            "width": 120,
-            "height": 200,
-            "hOffset": 0,
-            "vOffset": -20
-        },
-        "mobile": {
-            "show": true,
-            "scale": 0.5
-        },
-        "react": {
-            "opacityDefault": 0.7,
-            "opacityOnHover": 0.2
-        }
-    });
+    if (showL2Dwidget) {
+        L2Dwidget.init({
+            "model": {
+                "scale": 0.5
+            },
+            "display": {
+                "position": "right",
+                "width": 120,
+                "height": 200,
+                "hOffset": 0,
+                "vOffset": 40
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.3
+            },
+            "react": {
+                "opacityDefault": 0.7,
+                "opacityOnHover": 0.2
+            }
+        });
+    }
 }

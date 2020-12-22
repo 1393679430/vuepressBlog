@@ -31,11 +31,73 @@ module.exports = {
                 }, {
                     title: '博客目录',
                     path: '/views/blog/',
-                    collapsable: true,
+                    collapsable: false,
                     children: [
                         {
-                            title: '博客01',
-                            path: '/views/blog/blog01',
+                            title: 'angular',
+                            path: '/views/blog/angular/',
+                            collapsable: true,
+                            children: [
+                                {
+                                    title: 'angular修改端口号port',
+                                    path: '/views/blog/angular/blog001',
+                                }, {
+                                    title: 'angular绑定HTML标签',
+                                    path: '/views/blog/angular/blog002',
+                                }, {
+                                    title: '解决 angular 报错 ',
+                                    path: '/views/blog/angular/blog003',
+                                },
+                            ]
+                        }, {
+                            title: 'vue',
+                            path: '/views/blog/vue/',
+                            collapsable: true,
+                            children: [
+
+                            ]
+                        }, {
+                            title: 'react',
+                            path: '/views/blog/react/',
+                            collapsable: true,
+                            children: [
+                                {
+                                    title: '路由传参',
+                                    path: '/views/blog/react/blog001',
+                                },
+                            ]
+                        }, {
+                            title: 'js',
+                            path: '/views/blog/js/',
+                            collapsable: true,
+                            children: [
+                                {
+                                    title: '超出文本显示省略号',
+                                    path: '/views/blog/js/blog001',
+                                }, {
+                                    title: '数组去重',
+                                    path: '/views/blog/js/blog002',
+                                }, {
+                                    title: '数组最大值',
+                                    path: '/views/blog/js/blog003',
+                                },
+                            ]
+                        }, {
+                            title: '其他',
+                            path: '/views/blog/other/',
+                            collapsable: true,
+                            children: [
+                                {
+                                    title: '博客01',
+                                    path: '/views/blog/other/blog001',
+                                }, {
+                                    title: '博客02',
+                                    path: '/views/blog/other/blog002',
+                                }, {
+                                    title: '博客03',
+                                    path: '/views/blog/other/blog003',
+                                }
+                            ]
                         },
                     ]
                 },
@@ -51,7 +113,7 @@ module.exports = {
                     children: [
                         {
                             title: '工具01',
-                            path: '/views/tools/tools01',
+                            path: '/views/tools/tools001',
                         },
                     ]
                 },

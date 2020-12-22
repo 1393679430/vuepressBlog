@@ -8,8 +8,7 @@
   },
   "scripts": {
     "dev": "sudo vuepress dev docs",
-    "build": "sudo vuepress build docs",
-    "p": "sudo bash deploy.sh"
+    "build": "sudo vuepress build docs"
   },
   "keywords": [],
   "author": "",
