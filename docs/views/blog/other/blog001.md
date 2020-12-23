@@ -1,3 +1,12 @@
+---
+title: Hello World
+permalink: /hello-world
+---
+
+Hello!
+
+
+
 # 记载我的第一篇Blog
 
 正在熟悉MD语法，随便写点吧
@@ -5,6 +14,11 @@
 ---
 ***Markdown常用语法***
 
+
+
+::: details  AAA
+这是一个详情块，在 IE / Edge 中不生效
+:::
 
 # 一级标题
 ### 三级标题
@@ -114,7 +128,7 @@ This is a warning
 This is a dangerous warning
 :::
 
-![An image](../../../images/banner.jpg)
+![An image](../../../.vuepress/public/images/banner.jpg)
 
 ```
 <script>

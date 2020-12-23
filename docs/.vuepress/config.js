@@ -1,11 +1,37 @@
 module.exports = {
-    title: '编程趣事',  // 设置网站标题
+    title: '',  // 设置网站标题
     description: '编程趣事',
+    //  可以在head引入第三方css js
     head: [
         ['script', { src: 'https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js' }]
     ],
     base: '/',
+    markdown: {
+        // 显示行号
+        lineNumbers: true,
+        // markdown-it-anchor 的选项
+        anchor: { permalink: false },
+        // markdown-it-toc 的选项
+        toc: { includeLevel: [1, 2] },
+    },
+    plugins: [
+        [
+            '@vuepress/back-to-top',
+            { /* options */ }
+        ],
+        [
+            '@vuepress/google-analytics',
+            {
+              'ga': 'UA-185914001-0' // UA-00000000-0
+            }
+          ]
+    ],
     themeConfig: {
+        logo: '/images/logo.png',
+        search: true,
+        searchMaxSuggestions: 10,
+        lastUpdated: '最后更新于',
+        smoothScroll: false,
         nav: [
             {
                 text: '博客',
@@ -35,7 +61,7 @@ module.exports = {
                     children: [
                         {
                             title: 'angular',
-                            path: '/views/blog/angular/',
+                            path: '/views/blog/angular/blog001',
                             collapsable: true,
                             children: [
                                 {
@@ -51,14 +77,17 @@ module.exports = {
                             ]
                         }, {
                             title: 'vue',
-                            path: '/views/blog/vue/',
+                            path: '/views/blog/vue/blog001',
                             collapsable: true,
                             children: [
-
+                                {
+                                    title: 'vue模板语法',
+                                    path: '/views/blog/vue/blog001',
+                                },
                             ]
                         }, {
                             title: 'react',
-                            path: '/views/blog/react/',
+                            path: '/views/blog/react/blog001',
                             collapsable: true,
                             children: [
                                 {
@@ -68,7 +97,7 @@ module.exports = {
                             ]
                         }, {
                             title: 'js',
-                            path: '/views/blog/js/',
+                            path: '/views/blog/js/blog001',
                             collapsable: true,
                             children: [
                                 {
@@ -83,8 +112,38 @@ module.exports = {
                                 },
                             ]
                         }, {
+                            title: 'miniprogram',
+                            path: '/views/blog/miniprogram/blog001',
+                            collapsable: true,
+                            children: [
+                                {
+                                    title: 'npm-没有找到可以构建的NPM包',
+                                    path: '/views/blog/miniprogram/blog001',
+                                },
+                            ]
+                        }, {
+                            title: 'vuepress',
+                            path: '/views/blog/vuepress/blog001',
+                            collapsable: true,
+                            children: [
+                                {
+                                    title: '博客01',
+                                    path: '/views/blog/vuepress/blog001',
+                                },
+                            ]
+                        }, {
+                            title: '奇淫巧技',
+                            path: '/views/blog/nb/blog001',
+                            collapsable: true,
+                            children: [
+                                {
+                                    title: '博客01',
+                                    path: '/views/blog/nb/blog001',
+                                },
+                            ]
+                        }, {
                             title: '其他',
-                            path: '/views/blog/other/',
+                            path: '/views/blog/other/blog001',
                             collapsable: true,
                             children: [
                                 {
@@ -139,6 +198,6 @@ module.exports = {
         },
         displayAllHeaders: true,
         activeHeaderLinks: false,
-
+        sidebarDepth: 0,
     }
 }

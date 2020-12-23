@@ -1,0 +1,48 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add -D @vuepress/plugin-google-analytics
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/mysql/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  12.18.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: EACCES: permission denied, rmdir '/Users/liangdong.xu/Documents/other_work_me_2/vuepress/node_modules/@vuepress/core/.temp/app-enhancers'
+
+npm manifest: 
+  {
+    "name": "vuepressBlog",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+      "doc": "docs"
+    },
+    "scripts": {
+      "dev": "sudo vuepress dev docs",
+      "build": "sudo vuepress build docs"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "element-ui": "^2.14.1"
+    },
+    "devDependencies": {
+      "@vuepress/plugin-back-to-top": "^1.7.1",
+      "vuepress": "^1.7.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import '../style/index.css'
-let showL2Dwidget = true
+let showL2Dwidget = false
 export default ({
     Vue,
     options,
@@ -23,7 +22,7 @@ export default ({
             },
             "mobile": {
                 "show": true,
-                "scale": 0.3
+                "scale": 0.2
             },
             "react": {
                 "opacityDefault": 0.7,
