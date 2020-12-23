@@ -3,7 +3,29 @@ module.exports = {
     description: '编程趣事',
     //  可以在head引入第三方css js
     head: [
-        ['script', { src: 'https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js' }]
+        ['script', { src: 'https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js' }],
+        ['script', {}, `
+            var _hmt = _hmt || [];
+            (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?5ea9a024d88dc8403247dbfc5e1d0a1a"; // 注意是你自己网站的这个参数
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+
+            // 引入谷歌,不需要可删除这段
+            var hm1 = document.createElement("script");
+            hm1.src = "https://www.googletagmanager.com/gtag/js?id=UA-185914001-1";
+            var s1 = document.getElementsByTagName("script")[0]; 
+            s1.parentNode.insertBefore(hm1, s1);
+            })();
+
+            // 谷歌加载,不需要可删除
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-185914001-1');
+        `]
     ],
     base: '/',
     markdown: {
@@ -22,7 +44,7 @@ module.exports = {
         [
             '@vuepress/google-analytics',
             {
-              'ga': 'UA-185914001-0' // UA-00000000-0
+              'ga': 'UA-185914001-1' // UA-00000000-0
             }
           ]
     ],

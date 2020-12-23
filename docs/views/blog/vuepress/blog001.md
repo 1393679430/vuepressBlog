@@ -14,5 +14,20 @@
   "vuepress": "^1.5.0",
 }
 ```
+:::
+
+<br />
+
+::: tip 问题二: 报错Cannot find module 'core-js';
+改core-js的版本是不可能的，安装依赖`yarn add async-validator@1.11.5` / `npm install async-validator@1.11.5`就可以解决问题了！
+
+另外：
+
+```js
+npx vuepress info
+```
+
+`npx vuepress info`，如果出现vue包版本不一致的问题，记得将版本安装一致哦
+
 
 :::
