@@ -1,7 +1,7 @@
 <template>
     <div>
         <span>123</span>
-        <img :src="$withBase('/images/banner.jpg')" alt="img" />
+        <img class="zoom-custom-imgs" :src="$withBase('/images/banner.jpg')" alt="img" />
     </div>
 </template>
 

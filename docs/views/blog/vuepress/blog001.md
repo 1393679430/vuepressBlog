@@ -14,6 +14,9 @@
   "vuepress": "^1.5.0",
 }
 ```
+
+:pray: &nbsp; [引用地址, 感谢大佬](https://blog.csdn.net/wzc_coder/article/details/108613360)
+
 :::
 
 <br />
@@ -29,5 +32,6 @@ npx vuepress info
 
 `npx vuepress info`，如果出现vue包版本不一致的问题，记得将版本安装一致哦
 
+:pray: &nbsp; [引用地址，感谢大佬](https://blog.csdn.net/qq_32855007/article/details/108726430)
 
 :::

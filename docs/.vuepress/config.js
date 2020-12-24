@@ -3,6 +3,15 @@ module.exports = {
     description: '编程趣事',
     //  可以在head引入第三方css js
     head: [
+        ['link', { rel: 'icon', href: '/images/logo.png' }],
+        ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
+        ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+        ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+        ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
         ['script', { src: 'https://cdn.jsdelivr.net/npm/live2d-widget@3.0.4/lib/L2Dwidget.min.js' }],
         ['script', {}, `
             var _hmt = _hmt || [];
@@ -44,9 +53,39 @@ module.exports = {
         [
             '@vuepress/google-analytics',
             {
-              'ga': 'UA-185914001-1' // UA-00000000-0
+                'ga': 'UA-185914001-1' // UA-00000000-0
             }
-          ]
+        ],
+        [
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp, lang) => {
+                    // 不要忘了安装 dayjs
+                    const dayjs = require('dayjs')
+                    dayjs.locale(lang)
+                    return dayjs(timestamp).format('YYYY-MM-DD HH:mm:ss')
+                }
+            }
+        ],
+        [
+            '@vuepress/medium-zoom',
+            {
+                selector: 'img',
+                options: {
+                    margin: 16
+                }
+            }
+        ],
+        [
+            '@vuepress/nprogress'
+        ],
+        [
+            '@vuepress/pwa',
+            {
+                serviceWorker: true,
+                updatePopup: true
+            }
+        ]
     ],
     themeConfig: {
         logo: '/images/logo.png',
